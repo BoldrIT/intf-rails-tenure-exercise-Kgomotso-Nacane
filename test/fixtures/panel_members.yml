@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+panel1_member1:
+  panel: panel1
+  user: user1
+
+panel1_member2:
+  panel: panel1
+  user: user2
+
+panel2_member1:
+  panel: panel2
+  user: user1
+
+panel2_member2:
+  panel: panel2
+  user: user2

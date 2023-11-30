@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+action_item1:
+  panel: panel1
+  description: My action item text1
+  completed: true
+
+action_item2:
+  panel: panel1
+  description: My action item text2
+  completed: true

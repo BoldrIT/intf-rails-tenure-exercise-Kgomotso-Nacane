@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+user1:
+  email: awesomeemail1@domain.com
+  unique_identifier: myawesomeID1
+  institution: institution1
+
+user2:
+  email: awesomeemail2@domain.com
+  unique_identifier: myawesomeID2
+  institution: institution1

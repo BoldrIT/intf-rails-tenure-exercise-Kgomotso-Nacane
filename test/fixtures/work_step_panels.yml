@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+workstep1_panel1:
+  work_step: workstep1
+  panel: panel1
+
+workstep1_panel2:
+  work_step: workstep2
+  panel: panel1
+
+workstep1_panel3:
+  work_step: workstep1
+  panel: panel2

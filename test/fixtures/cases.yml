@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+case1:
+  candidate_fullname: Pancho Villa
+  candidate_email: panchovilla@revolution.mx
+  due_date: 2021-02-05 16:59:18
+  institution: institution1
+
+case2:
+  candidate_fullname: Rosita Alvirez
+  candidate_email: rose@songs.mx
+  due_date: 2021-02-05 16:59:18
+  institution: institution2

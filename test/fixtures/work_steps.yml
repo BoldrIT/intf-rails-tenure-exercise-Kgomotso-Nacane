@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+workstep1:
+  step_number: 1
+  current: false
+  case: case1
+  due_date: 2021-02-05 16:59:18
+
+workstep2:
+  step_number: 2
+  current: true
+  case: case1
+  due_date: 2021-02-05 16:59:18
+
+workstep3:
+  step_number: 3
+  current: true
+  case: case1
+  due_date: 2021-02-05 16:59:18
+
+workstep4:
+  step_number: 1
+  current: true
+  case: case2
+  due_date: 2021-02-05 16:59:18
