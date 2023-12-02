@@ -51,7 +51,13 @@ class Case < ApplicationRecord
   def as_json(options = {})
     super(options).merge(
       previous_step_number: calculate_previous_step_number,
-      next_step_number: calculate_next_step_number
+      next_step_number: calculate_next_step_number,
+      user: {
+        id: user.id,
+        email: user.email,
+        unique_identifier: user.unique_identifier,
+        institution: user.institution
+      }
     )
   end
 
