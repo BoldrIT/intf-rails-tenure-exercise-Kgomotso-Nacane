@@ -64,4 +64,12 @@ class Case < ApplicationRecord
       work_step.save
     end
   end
+
+  def calculate_previous_step_number
+    previous_work_step&.step_number
+  end
+
+  def calculate_next_step_number
+    next_work_step&.step_number
+  end
 end
