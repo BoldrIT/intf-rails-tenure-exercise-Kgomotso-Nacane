@@ -48,6 +48,13 @@ class Case < ApplicationRecord
     !applicant_was_notified_at.blank?
   end
 
+  def as_json(options = {})
+    super(options).merge(
+      previous_step_number: calculate_previous_step_number,
+      next_step_number: calculate_next_step_number
+    )
+  end
+
   private
 
   def create_first_work_step
