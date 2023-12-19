@@ -9,5 +9,7 @@ json.set! :results do
     json.current_step_due_date a_case.current_step_due_date
     json.current_step_all_requirements_complete a_case.current_step_all_requirements_complete?
     json.current_panel_name a_case.current_panel_name
+    json.previous_step_number a_case.previous_step_number
+    json.next_step_number a_case.next_step_number
   end
 end

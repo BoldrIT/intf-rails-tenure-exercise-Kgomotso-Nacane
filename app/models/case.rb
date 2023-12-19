@@ -48,6 +48,19 @@ class Case < ApplicationRecord
     !applicant_was_notified_at.blank?
   end
 
+  def as_json(options = {})
+    super(options).merge(
+      previous_step_number: calculate_previous_step_number,
+      next_step_number: calculate_next_step_number,
+      user: {
+        id: user.id,
+        email: user.email,
+        unique_identifier: user.unique_identifier,
+        institution: user.institution
+      }
+    )
+  end
+
   private
 
   def create_first_work_step
@@ -56,5 +69,13 @@ class Case < ApplicationRecord
       work_step.panels << panel
       work_step.save
     end
+  end
+
+  def calculate_previous_step_number
+    previous_work_step&.step_number
+  end
+
+  def calculate_next_step_number
+    next_work_step&.step_number
   end
 end
