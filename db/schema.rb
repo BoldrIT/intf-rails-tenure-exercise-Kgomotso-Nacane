@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_12_02_135048) do
+ActiveRecord::Schema.define(version: 2023_12_02_164156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2023_12_02_135048) do
     t.datetime "applicant_was_notified_at"
     t.integer "previous_step_number"
     t.integer "next_step_number"
+    t.index ["candidate_fullname"], name: "index_cases_on_candidate_fullname"
     t.index ["institution_id"], name: "index_cases_on_institution_id"
   end
 
