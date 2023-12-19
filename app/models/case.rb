@@ -7,8 +7,9 @@ class Case < ApplicationRecord
 
   after_create :create_first_work_step
 
+  # Here I replaced `select` and `first` methods with `find` to enhance the code clarity
   def current_work_step
-    @current_work_step ||= these_work_steps.select { |step| step.current }.first rescue nil
+    @current_work_step ||= these_work_steps.find(&:current)
   end
 
   def current_step_number
@@ -63,12 +64,23 @@ class Case < ApplicationRecord
 
   private
 
+  # For better readability and maintainability,
+  # I broke down the `crete_first_work_step` method into smaller methods to handle specific tasks.
+  # I would say this makes it more modular.
   def create_first_work_step
+    build_first_work_step
+  end
+
+  def build_first_work_step
     these_work_steps.build(step_number: 0, current: true).tap do |work_step|
-      panel = Panel.new(case_id: self.id, name: "Case is Being Created")
-      work_step.panels << panel
+      build_first_panel(work_step)
       work_step.save
     end
+  end
+
+  def build_first_panel(work_step)
+    panel = Panel.new(case_id: id, name: "Case is Being Created")
+    work_step.panels << panel
   end
 
   def calculate_previous_step_number
